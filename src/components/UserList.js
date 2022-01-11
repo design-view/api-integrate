@@ -1,11 +1,8 @@
 import User from "./User";
-function UserList({users, onToggle, onDelete}){
+function UserList({users}){
     return(
         <div>
-            {users.map(user=>
-            <User key={user.id} user={user} 
-            onToggle={onToggle} 
-            onDelete={onDelete} />)}
+            {users.map(user=><User key={user.id} user={user} />)}
         </div>
     );
 }

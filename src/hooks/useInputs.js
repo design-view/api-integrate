@@ -1,8 +1,8 @@
 import { useState } from 'react';
 function useInputs(initialForm){
-    const [ form, setForm ] = useState();
+    const [ form, setForm ] = useState(initialForm);
     const onChange = (e) => {
-        const { name, value } = e.targer;
+        const { name, value } = e.target;
         setForm( form => ({...form, [name]: value})); 
     }
     const reset = () => setForm(initialForm);
